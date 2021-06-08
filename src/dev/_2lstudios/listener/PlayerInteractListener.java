@@ -15,7 +15,7 @@ public class PlayerInteractListener implements Listener {
         this.renameManager = renameManager;
     }
 
-    @EventHandler
+    @EventHandler(ignoreCancelled = true)
     public void onPlayerInteract(final PlayerInteractEvent event) {
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
             final Player player = event.getPlayer();
