@@ -1,5 +1,7 @@
 package dev._2lstudios.listener;
 
+import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,9 +20,15 @@ public class PlayerInteractListener implements Listener {
     @EventHandler(ignoreCancelled = true)
     public void onPlayerInteract(final PlayerInteractEvent event) {
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            final Player player = event.getPlayer();
+            final Block block = event.getClickedBlock();
 
-            renameManager.createTask(player);
+            if (block != null && block.getType() == Material.BEACON) {
+                final Player player = event.getPlayer();
+
+                renameManager.createTask(player);
+
+                event.setCancelled(true);
+            }
         }
     }
 }
