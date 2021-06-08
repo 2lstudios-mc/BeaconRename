@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
-public class RenameManager {
+public class RenameManager implements Runnable {
     private final Collection<RenameTask> tasks = new HashSet<>();
     private final RenameConfig renameConfig;
 
@@ -24,7 +24,8 @@ public class RenameManager {
         this.tasks.add(new RenameTask(renameConfig, player, heldItem));
     }
 
-    public void update() {
+    @Override
+    public void run() {
         final Iterator<RenameTask> iterator = tasks.iterator();
 
         while (iterator.hasNext()) {
