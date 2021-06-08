@@ -1,8 +1,10 @@
 retry_messages:
-  - "<%item_name%> Hmmm... que feo nombre..."
+  - "&c<%item_name%> Hmmm... que feo nombre..."
 success_messages:
-  - "<%item_name%> Este si me gusta, esta genial!"
+  - "&a<%item_name%> Este si me gusta, esta genial!"
+error_messages:
+  - "&cUh-Oh! El item no pudo ser renombrado..."
 item_names:
-  - "AutoClick"
-  - "Raspberry"
-  - "Rompeanos"
+  - "&b&nAutoClick"
+  - "&c&nRaspberry"
+  - "&8&nRompeanos"
