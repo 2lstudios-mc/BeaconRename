@@ -10,13 +10,18 @@ import org.bukkit.inventory.PlayerInventory;
 
 public class RenameManager {
     private final Collection<RenameTask> tasks = new HashSet<>();
+    private final RenameConfig renameConfig;
+
+    public RenameManager(final RenameConfig renameConfig) {
+        this.renameConfig = renameConfig;
+    }
 
     public void createTask(final Player player) {
         final PlayerInventory inventory = player.getInventory();
         final int heldItemSlot = inventory.getHeldItemSlot();
         final ItemStack heldItem = inventory.getItem(heldItemSlot);
 
-        this.tasks.add(new RenameTask(player, heldItem));
+        this.tasks.add(new RenameTask(renameConfig, player, heldItem));
     }
 
     public void update() {
