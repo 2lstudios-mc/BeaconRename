@@ -1,4 +1,4 @@
-package dev._2lstudios.util;
+package dev._2lstudios.utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,4 +17,8 @@ public class ChatColorUtils {
         
         return list;
     } 
+
+    public static String translateColorCodes(final String string) {
+        return ChatColor.translateAlternateColorCodes('&', string);
+    }
 }
