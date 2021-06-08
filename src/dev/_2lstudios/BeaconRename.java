@@ -15,7 +15,10 @@ public class BeaconRename extends JavaPlugin {
         final Configuration config = configurationUtils.createAndGet("%datafolder%/config.yml", "config.yml");
         final RenameConfig renameConfig = new RenameConfig(config);
         final RenameManager renameManager = new RenameManager(renameConfig);
+        final long delay = renameConfig.getDelay();
 
         BeaconRenameListeners.initialize(this, renameManager);
+
+        getServer().getScheduler().runTaskTimerAsynchronously(this, renameManager, delay, delay);
     }
 }
