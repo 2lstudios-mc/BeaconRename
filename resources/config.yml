@@ -1,0 +1,8 @@
+retry_messages:
+  - "<%item_name%> Hmmm... que feo nombre..."
+success_messages:
+  - "<%item_name%> Este si me gusta, esta genial!"
+item_names:
+  - "AutoClick"
+  - "Raspberry"
+  - "Rompeanos"
