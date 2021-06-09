@@ -49,7 +49,7 @@ success_sounds:
 error_sounds:
  - "VILLAGER_NO"
 
-# Sound that plays when you do not have permissions
+# Sounds to play when you don't have permission to use BeaconRename
 no_permission_sounds: 
  - "ITEM_BREAK"
  
