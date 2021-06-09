@@ -41,21 +41,21 @@ class PlayerInteractListener implements Listener {
 
                     event.setCancelled(true);
 
-                    if (permission == null || permission.isEmpty() || player.hasPermission(permission)) {
-                        if (!renameManager.hasTask(player)) {
-                            renameManager.createTask(player);
-                        } else {
-                            player.sendMessage(renameConfig.getAlreadyRenamingMessage());
-                        }
-                    } else if (BukkitUtils.hasDisplayname(heldItem)) {
-                        player.sendMessage(renameConfig.getAlreadyRenamedMessage());
-                    } else {
+                    if (permission != null && !permission.isEmpty() && !player.hasPermission(permission)) {
                         final Sound sound = renameConfig.getErrorSound();
 
                         player.sendMessage(renameConfig.getNoPermissionMessage());
 
                         if (sound != null) {
                             player.playSound(player.getLocation(), sound, 1, 1);
+                        }
+                    } else if (BukkitUtils.hasDisplayname(heldItem)) {
+                        player.sendMessage(renameConfig.getAlreadyRenamedMessage());
+                    } else {
+                        if (!renameManager.hasTask(player)) {
+                            renameManager.createTask(player);
+                        } else {
+                            player.sendMessage(renameConfig.getAlreadyRenamingMessage());
                         }
                     }
                 }
