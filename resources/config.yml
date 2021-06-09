@@ -5,51 +5,44 @@
 # +=======================================+ #
 #############################################
 
-# Esta opción permite ajustar la cantidad de mensajes enviados
-# al jugador esta, estos mensajes se encuentran en "retry_messages:"
-# Se recomienda dejarlo entre 4 o 5 para no recibir demasiado spam.
+# Amount of retries before successfully renaming
 retries: 4
 
-# Esta opcion permite ajustar los segundos en que se envia cada mensaje
-# de la seccion "retry_messages:" la cantidad esta ajustada por ticks,
-# los ticks funcionan de la siguiente manera (20 = 1 segundo).
+# Delay between retries (in ticks)
 delay: 10
 
 # Permission to use BeaconRename
 permission: ""
 
-# Mensajes de reintento. Puedes agregar los mensajes de intento que quieras,
-# recuerda que si agregas muchos mensajes tienes que definir la cantidad de
-# mensajes que apareceran en "retries:" 
+# Messages to show when retrying rename
 retry_messages:
  - "%item_name% &e» &cHmmm... que feo nombre..."
  - "%item_name% &e» &cHmmm... no me convence..."
  - "%item_name% &e» &cHmmm... puede ser... mejor no."
  - "%item_name% &e» &cBueno pero puede haber mejores."
  
-# Mensaje de renombrado exitoso. Puedes modificar este mensaje como gustes. 
+# Messages to show when rename was successful
 success_messages:
  - "%item_name% &6» &aEste si me gusta, esta genial!"
  
-# Mensaje de renombrado erroneo. Este mensaje aparece cuando no se renombro
-# Un item por alguna razon, modificalo como gustes.
+# Messages to show when an error has ocurred
 error_messages:
  - "&cUh-Oh! El item no pudo ser renombrado..."
  
-# Seccion de Sonidos. En esta seccion estan los sonidos especificos de las 3
-# secciones de mensajes de arriba. Todos lo sonidos los encuentras aqui.
-# https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
+# Available sounds (1.8): https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
+# Sounds to play when retrying rename
 retry_sounds:
  - "NOTE_PLING"
- 
+
+# Sounds to play when rename was successful
 success_sounds:
  - "LEVEL_UP"
- 
+
+# Sounds to play when an error has ocurred
 error_sounds:
  - "VILLAGER_YES"
   
-# Renombres añade los renombres que quieras con su respectivo color, estos
-# se elegirán aleatoriamente.
+# Randomly selected renames to apply with beacons
 item_names:
  - "&bAutoClick"
  - "&bL"
