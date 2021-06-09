@@ -13,6 +13,7 @@ public class RenameConfig {
     private final List<String> successMessages;
     private final List<String> errorMessages;
     private final List<String> alreadyRenamingMessages;
+    private final List<String> alreadyRenamedMessages;
     private final List<String> noPermissionMessages;
     private final List<String> itemNames;
 
@@ -31,6 +32,7 @@ public class RenameConfig {
         successMessages = ChatColorUtils.translateColorCodes(config.getStringList("success_messages"));
         errorMessages = ChatColorUtils.translateColorCodes(config.getStringList("error_messages"));
         alreadyRenamingMessages = ChatColorUtils.translateColorCodes(config.getStringList("already_renaming_messages"));
+        alreadyRenamedMessages = ChatColorUtils.translateColorCodes(config.getStringList("already_renamed_messages"));
         noPermissionMessages = ChatColorUtils.translateColorCodes(config.getStringList("no_permission_messages"));
         itemNames = ChatColorUtils.translateColorCodes(config.getStringList("item_names"));
 
@@ -63,6 +65,10 @@ public class RenameConfig {
 
     public String getAlreadyRenamingMessage() {
         return ChatColorUtils.translateColorCodes(ListUtils.getRandomString(alreadyRenamingMessages));
+    }
+
+    public String getAlreadyRenamedMessage() {
+        return ChatColorUtils.translateColorCodes(ListUtils.getRandomString(alreadyRenamedMessages));
     }
 
     public String getNoPermissionMessage() {

@@ -47,6 +47,8 @@ class PlayerInteractListener implements Listener {
                         } else {
                             player.sendMessage(renameConfig.getAlreadyRenamingMessage());
                         }
+                    } else if (BukkitUtils.hasDisplayname(heldItem)) {
+                        player.sendMessage(renameConfig.getAlreadyRenamedMessage());
                     } else {
                         final Sound sound = renameConfig.getErrorSound();
 
