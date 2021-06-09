@@ -25,10 +25,18 @@ public class ListUtils {
     }
 
     public static String getRandomString(final List<String> list) {
+        if (list.isEmpty()) {
+            return "";
+        }
+
         return list.get(getRandomIndex(list));
     }
 
     public static Sound getRandomSound(final List<Sound> list) {
+        if (list.isEmpty()) {
+            return null;
+        }
+
         return list.get(getRandomIndex(list));
     }
 }
