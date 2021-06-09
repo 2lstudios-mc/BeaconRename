@@ -1,6 +1,7 @@
 package dev._2lstudios.listener;
 
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -47,7 +48,13 @@ class PlayerInteractListener implements Listener {
 
                         event.setCancelled(true);
                     } else {
-                        player.sendMessage(renameConfig.getPermissionMessage());
+                        final Sound sound = renameConfig.getErrorSound();
+
+                        player.sendMessage(renameConfig.getNoPermissionMessage());
+
+                        if (sound != null) {
+                            player.playSound(player.getLocation(), sound, 1, 1);
+                        }
                     }
                 }
             }

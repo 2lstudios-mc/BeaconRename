@@ -13,12 +13,13 @@ public class RenameConfig {
     private final List<String> successMessages;
     private final List<String> errorMessages;
     private final List<String> alreadyRenamingMessages;
-    private final List<String> permissionMessages;
+    private final List<String> noPermissionMessages;
     private final List<String> itemNames;
 
     private final List<Sound> retrySounds;
     private final List<Sound> successSounds;
     private final List<Sound> errorSounds;
+    private final List<Sound> noPermissionSounds;
 
     private final String permission;
 
@@ -30,12 +31,13 @@ public class RenameConfig {
         successMessages = ChatColorUtils.translateColorCodes(config.getStringList("success_messages"));
         errorMessages = ChatColorUtils.translateColorCodes(config.getStringList("error_messages"));
         alreadyRenamingMessages = ChatColorUtils.translateColorCodes(config.getStringList("already_renaming_messages"));
-        permissionMessages = ChatColorUtils.translateColorCodes(config.getStringList("permission_messages"));
+        noPermissionMessages = ChatColorUtils.translateColorCodes(config.getStringList("no_permission_messages"));
         itemNames = ChatColorUtils.translateColorCodes(config.getStringList("item_names"));
 
         retrySounds = ListUtils.toSoundList(config.getStringList("retry_sounds"));
         successSounds = ListUtils.toSoundList(config.getStringList("success_sounds"));
         errorSounds = ListUtils.toSoundList(config.getStringList("error_sounds"));
+        noPermissionSounds = ListUtils.toSoundList(config.getStringList("no_permission_sounds"));
 
         permission = config.getString("permission", ""); 
 
@@ -63,8 +65,8 @@ public class RenameConfig {
         return ChatColorUtils.translateColorCodes(ListUtils.getRandomString(alreadyRenamingMessages));
     }
 
-    public String getPermissionMessage() {
-        return ChatColorUtils.translateColorCodes(ListUtils.getRandomString(permissionMessages));
+    public String getNoPermissionMessage() {
+        return ChatColorUtils.translateColorCodes(ListUtils.getRandomString(noPermissionMessages));
     }
 
     public String getItemName() {
@@ -81,6 +83,10 @@ public class RenameConfig {
 
     public Sound getErrorSound() {
         return ListUtils.getRandomSound(errorSounds);
+    }
+
+    public Sound getNoPermissionSounds() {
+        return ListUtils.getRandomSound(noPermissionSounds);
     }
 
     public String getPermission() {
