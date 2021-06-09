@@ -1,22 +1,85 @@
+#############################################
+# +=======================================+ #
+#          BeaconReanme Created by          #
+#      LinsaFTW afiliado a 2LS Studios      #
+# +=======================================+ #
+#############################################
+
+# Esta opción permite ajustar la cantidad de mensajes enviados
+# al jugador esta, estos mensajes se encuentran en "retry_messages:"
+# Se recomienda dejarlo entre 4 o 5 para no recibir demasiado spam.
 retries: 4
-delay: 5
 
+# Esta opcion permite ajustar los segundos en que se envia cada mensaje
+# de la seccion "retry_messages:" la cantidad esta ajustada por ticks,
+# los ticks funcionan de la siguiente manera (20 = 1 segundo).
+delay: 10
+
+# Mensajes de reintento. Puedes agregar los mensajes de intento que quieras,
+# recuerda que si agregas muchos mensajes tienes que definir la cantidad de
+# mensajes que apareceran en "retries:" 
 retry_messages:
-  - "&c<%item_name%> Hmmm... que feo nombre..."
+ - "%item_name% &e» &cHmmm... que feo nombre..."
+ - "%item_name% &e» &cHmmm... no me convence..."
+ - "%item_name% &e» &cHmmm... puede ser... mejor no."
+ - "%item_name% &e» &cBueno pero puede haber mejores."
+ 
+# Mensaje de renombrado exitoso. Puedes modificar este mensaje como gustes. 
 success_messages:
-  - "&a<%item_name%> Este si me gusta, esta genial!"
+ - "%item_name% &6» &aEste si me gusta, esta genial!"
+ 
+# Mensaje de renombrado erroneo. Este mensaje aparece cuando no se renombro
+# Un item por alguna razon, modificalo como gustes.
 error_messages:
-  - "&cUh-Oh! El item no pudo ser renombrado..."
-already_renaming_messages:
-  - "&cParece que ya estas renombrando un item!"
-item_names:
-  - "&b&nAutoClick"
-  - "&c&nRaspberry"
-  - "&8&nRompeanos"
-
+ - "&cUh-Oh! El item no pudo ser renombrado..."
+ 
+# Seccion de Sonidos. En esta seccion estan los sonidos especificos de las 3
+# secciones de mensajes de arriba. Todos lo sonidos los encuentras aqui.
+# https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
 retry_sounds:
-  - "NOTE_PLING"
+ - "NOTE_PLING"
+ 
 success_sounds:
-  - "NOTE_PLING"
+ - "LEVEL_UP"
+ 
 error_sounds:
-  - "NOTE_PLING"
+ - "VILLAGER_YES"
+  
+# Renombres añade los renombres que quieras con su respectivo color, estos
+# se elegirán aleatoriamente.
+item_names:
+ - "&bAutoClick"
+ - "&bL"
+ - "&bDrip"
+ - "&bVape"
+ - "&bAnime"
+ - "&bHuzuni"
+ - "&bGang"
+ - "&bExcalibur"
+ - "&bSavage"
+ - "&bBruh"
+ - "6BUwU"
+ - "6bDNS"
+ - "&bEasy Money"
+ - "&b$$$"
+ - "&bRage"
+ - "&bKiller"
+ - "&bDAB"
+ - "&bDemon"
+ - "&bHacker"
+ - "&bREKT"
+ - "&bWEED"
+ - "&bE-GIRL"
+ - "&bGOD"
+ - "&bQueen"
+ - "&bEdater"
+ - "&bRandy"
+ - "&bLOL"
+ - "&bpce"
+ - "&bCrazy"
+ - "&bTank"
+ - "&bOG"
+ - "&bMourning"
+ - "&bMVP"
+ - "&bBOO"
+ - "&bGhoul"
