@@ -33,6 +33,11 @@ error_messages:
  - "&cUh-Oh! The item can't be renamed..."
  - "&cAn error ocurred while renaming the item..."
 
+# Messages to show when you are already renaming an item
+already_renaming_messages:
+  - "&cStop! You are already renaming an item!"
+  - "&cHuhh... Don't spam me. You are already renaming!"
+
 # Messages to show when player doesn't have permission to use BeaconRename
 no_permission_messages:
   - "&cIt seems you don't have permissions."
