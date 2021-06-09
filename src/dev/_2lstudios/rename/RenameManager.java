@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
 
 public class RenameManager implements Runnable {
     private final Collection<RenameTask> tasks = new HashSet<>();
@@ -17,11 +15,7 @@ public class RenameManager implements Runnable {
     }
 
     public void createTask(final Player player) {
-        final PlayerInventory inventory = player.getInventory();
-        final int heldItemSlot = inventory.getHeldItemSlot();
-        final ItemStack heldItem = inventory.getItem(heldItemSlot);
-
-        this.tasks.add(new RenameTask(renameConfig, player, heldItem));
+        this.tasks.add(new RenameTask(renameConfig, player));
     }
 
     @Override

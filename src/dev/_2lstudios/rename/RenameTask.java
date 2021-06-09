@@ -6,17 +6,17 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import dev._2lstudios.utils.BukkitUtils;
+
 public class RenameTask {
     private final RenameConfig renameConfig;
     private final Player player;
-    private final ItemStack item;
     private final int retries;
     private int runs = 0;
 
-    RenameTask(final RenameConfig renameConfig, final Player player, final ItemStack item) {
+    RenameTask(final RenameConfig renameConfig, final Player player) {
         this.renameConfig = renameConfig;
         this.player = player;
-        this.item = item;
         this.retries = renameConfig.getRetries();
     }
 
@@ -36,9 +36,9 @@ public class RenameTask {
         } else if (runs == retries) {
             final PlayerInventory inventory = player.getInventory();
             final int heldItemSlot = inventory.getHeldItemSlot();
-            final ItemStack itemInHand = inventory.getItem(heldItemSlot);
+            final ItemStack item = inventory.getItem(heldItemSlot);
 
-            if (itemInHand != null && itemInHand.isSimilar(item)) {
+            if (item != null && BukkitUtils.isSword(item)) {
                 final Sound sound = renameConfig.getSuccessSound();
                 final ItemMeta itemMeta = item.getItemMeta();
 
