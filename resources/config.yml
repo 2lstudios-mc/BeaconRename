@@ -38,6 +38,12 @@ already_renaming_messages:
   - "&cStop! You are already renaming an item!"
   - "&cHuhh... Don't spam me. You are already renaming!"
 
+# Messages to show when an item is already renamed
+already_renamed_messages:
+  - "&cThat item is already renamed!"
+  - "&cYou can't rename an item twice!"
+  - "&cYou are trying to rename an already renamed item!"
+
 # Messages to show when player doesn't have permission to use BeaconRename
 no_permission_messages:
   - "&cIt seems you don't have permissions."
