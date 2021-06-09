@@ -8,3 +8,10 @@ item_names:
   - "&b&nAutoClick"
   - "&c&nRaspberry"
   - "&8&nRompeanos"
+
+retry_sounds:
+  - "NOTE_PLING"
+success_sounds:
+  - "NOTE_PLING"
+error_sounds:
+  - "NOTE_PLING"
