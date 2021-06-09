@@ -19,9 +19,10 @@ public class RenameConfig {
     private final List<Sound> successSounds;
     private final List<Sound> errorSounds;
 
-    private final int retries;
+    private final String permission;
 
-    private final long delay;
+    private final int retries;
+    private final int delay;
 
     public RenameConfig(final Configuration config) {
         retryMessages = ChatColorUtils.translateColorCodes(config.getStringList("retry_messages"));
@@ -34,17 +35,10 @@ public class RenameConfig {
         successSounds = ListUtils.toSoundList(config.getStringList("success_sounds"));
         errorSounds = ListUtils.toSoundList(config.getStringList("error_sounds"));
 
+        permission = config.getString("permission", ""); 
+
         retries = config.getInt("retries", 4);
-
-        delay = config.getLong("delay", 5L);
-    }
-
-    public long getDelay() {
-        return delay;
-    }
-
-    public int getRetries() {
-        return retries;
+        delay = config.getInt("delay", 5);
     }
 
     private String replacePlaceholders(final String string, final String itemName) {
@@ -81,5 +75,17 @@ public class RenameConfig {
 
     public Sound getErrorSound() {
         return ListUtils.getRandomSound(errorSounds);
+    }
+
+    public String getPermission() {
+        return permission;
+    }
+
+    public int getRetries() {
+        return retries;
+    }
+
+    public long getDelay() {
+        return delay;
     }
 }
