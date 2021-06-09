@@ -24,9 +24,9 @@ retry_messages:
  
 # Messages to show when rename was successful
 success_messages:
- - "&7\n%item_name% &6» &aI like this one, alright!\n&7"
- - "&7\n%item_name% &6» &aWooW! I love it!\n&7"
- - "&7\n%item_name% &6» &aThis is the one! Keep it!\n&7"
+ - "&7\n%item_name% &6» &aI like this one, alright!"
+ - "&7\n%item_name% &6» &aWooW! I love it!"
+ - "&7\n%item_name% &6» &aThis is the one! Keep it!"
  
 # Messages to show when an error has ocurred
 error_messages:
