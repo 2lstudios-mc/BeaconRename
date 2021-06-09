@@ -12,7 +12,7 @@ retries: 4
 delay: 10
 
 # Permission to use BeaconRename
-permission: ""
+permission: "beaconrename.usage"
 
 # Messages to show when retrying rename
 retry_messages:
