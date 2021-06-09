@@ -46,6 +46,8 @@ class PlayerInteractListener implements Listener {
                         }
 
                         event.setCancelled(true);
+                    } else {
+                        player.sendMessage(renameConfig.getPermissionMessage());
                     }
                 }
             }
