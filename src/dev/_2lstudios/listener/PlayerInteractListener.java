@@ -8,8 +8,11 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 
 import dev._2lstudios.rename.RenameManager;
+import dev._2lstudios.utils.BukkitUtils;
 
 public class PlayerInteractListener implements Listener {
     private final RenameManager renameManager;
@@ -25,10 +28,15 @@ public class PlayerInteractListener implements Listener {
 
             if (block != null && block.getType() == Material.BEACON) {
                 final Player player = event.getPlayer();
+                final PlayerInventory inventory = player.getInventory();
+                final int heldItemSlot = inventory.getHeldItemSlot();
+                final ItemStack heldItem = inventory.getItem(heldItemSlot);
 
-                renameManager.createTask(player);
+                if (heldItem != null && BukkitUtils.isSword(heldItem)) {
+                    renameManager.createTask(player);
 
-                event.setCancelled(true);
+                    event.setCancelled(true);
+                }
             }
         }
     }
