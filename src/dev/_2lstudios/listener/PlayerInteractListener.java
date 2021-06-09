@@ -15,7 +15,7 @@ import dev._2lstudios.rename.RenameConfig;
 import dev._2lstudios.rename.RenameManager;
 import dev._2lstudios.utils.BukkitUtils;
 
-public class PlayerInteractListener implements Listener {
+class PlayerInteractListener implements Listener {
     private final RenameConfig renameConfig;
     private final RenameManager renameManager;
 
