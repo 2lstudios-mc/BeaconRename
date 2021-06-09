@@ -16,17 +16,17 @@ permission: "beaconrename.usage"
 
 # Messages to show when retrying rename
 retry_messages:
- - "%item_name% &e» &cThat's not a good name..."
- - "%item_name% &e» &cHmmm... it doesn't convince me..."
- - "%item_name% &e» &cHmmm... maybe... or not..."
- - "%item_name% &e» &cOkay, but it could be better..."
- - "%item_name% &e» &cThat's not okay..."
+ - "&7\n%item_name% &e» &cThat's not a good name..."
+ - "&7\n%item_name% &e» &cHmmm... it doesn't convince me..."
+ - "&7\n%item_name% &e» &cHmmm... maybe... or not..."
+ - "&7\n%item_name% &e» &cOkay, but it could be better..."
+ - "&7\n%item_name% &e» &cThat's not okay..."
  
 # Messages to show when rename was successful
 success_messages:
- - "%item_name% &6» &aI like this one, alright!"
- - "%item_name% &6» &aWooW! I love it!"
- - "%item_name% &6» &aThis is the one! Keep it!"
+ - "&7\n%item_name% &6» &aI like this one, alright!&7\n"
+ - "&7\n%item_name% &6» &aWooW! I love it!&7\n"
+ - "&7\n%item_name% &6» &aThis is the one! Keep it!&7\n"
  
 # Messages to show when an error has ocurred
 error_messages:
