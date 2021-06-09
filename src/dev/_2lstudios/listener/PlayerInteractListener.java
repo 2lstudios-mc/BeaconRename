@@ -36,13 +36,17 @@ class PlayerInteractListener implements Listener {
                 final ItemStack heldItem = inventory.getItem(heldItemSlot);
 
                 if (heldItem != null && BukkitUtils.isSword(heldItem)) {
-                    if (!renameManager.hasTask(player)) {
-                        renameManager.createTask(player);
-                    } else {
-                        player.sendMessage(renameConfig.getAlreadyRenamingMessage());
-                    }
+                    final String permission = renameConfig.getPermission();
 
-                    event.setCancelled(true);
+                    if (permission == null || permission.isEmpty() || player.hasPermission(permission)) {
+                        if (!renameManager.hasTask(player)) {
+                            renameManager.createTask(player);
+                        } else {
+                            player.sendMessage(renameConfig.getAlreadyRenamingMessage());
+                        }
+
+                        event.setCancelled(true);
+                    }
                 }
             }
         }
