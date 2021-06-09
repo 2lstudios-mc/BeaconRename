@@ -1,3 +1,6 @@
+retries: 4
+delay: 5
+
 retry_messages:
   - "&c<%item_name%> Hmmm... que feo nombre..."
 success_messages:
