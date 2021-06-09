@@ -39,14 +39,14 @@ class PlayerInteractListener implements Listener {
                 if (heldItem != null && BukkitUtils.isSword(heldItem)) {
                     final String permission = renameConfig.getPermission();
 
+                    event.setCancelled(true);
+
                     if (permission == null || permission.isEmpty() || player.hasPermission(permission)) {
                         if (!renameManager.hasTask(player)) {
                             renameManager.createTask(player);
                         } else {
                             player.sendMessage(renameConfig.getAlreadyRenamingMessage());
                         }
-
-                        event.setCancelled(true);
                     } else {
                         final Sound sound = renameConfig.getErrorSound();
 
