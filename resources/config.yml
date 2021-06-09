@@ -15,6 +15,9 @@ retries: 4
 # los ticks funcionan de la siguiente manera (20 = 1 segundo).
 delay: 10
 
+# Permission to use BeaconRename
+permission: ""
+
 # Mensajes de reintento. Puedes agregar los mensajes de intento que quieras,
 # recuerda que si agregas muchos mensajes tienes que definir la cantidad de
 # mensajes que apareceran en "retries:" 
