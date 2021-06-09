@@ -11,13 +11,16 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
+import dev._2lstudios.rename.RenameConfig;
 import dev._2lstudios.rename.RenameManager;
 import dev._2lstudios.utils.BukkitUtils;
 
 public class PlayerInteractListener implements Listener {
+    private final RenameConfig renameConfig;
     private final RenameManager renameManager;
 
-    PlayerInteractListener(final RenameManager renameManager) {
+    PlayerInteractListener(final RenameConfig renameConfig, final RenameManager renameManager) {
+        this.renameConfig = renameConfig;
         this.renameManager = renameManager;
     }
 
@@ -33,7 +36,11 @@ public class PlayerInteractListener implements Listener {
                 final ItemStack heldItem = inventory.getItem(heldItemSlot);
 
                 if (heldItem != null && BukkitUtils.isSword(heldItem)) {
-                    renameManager.createTask(player);
+                    if (!renameManager.hasTask(player)) {
+                        renameManager.createTask(player);
+                    } else {
+                        player.sendMessage(renameConfig.getAlreadyRenamingMessage());
+                    }
 
                     event.setCancelled(true);
                 }

@@ -12,6 +12,7 @@ public class RenameConfig {
     private final List<String> retryMessages;
     private final List<String> successMessages;
     private final List<String> errorMessages;
+    private final List<String> alreadyRenamingMessages;
     private final List<String> itemNames;
 
     private final List<Sound> retrySounds;
@@ -26,6 +27,7 @@ public class RenameConfig {
         retryMessages = ChatColorUtils.translateColorCodes(config.getStringList("retry_messages"));
         successMessages = ChatColorUtils.translateColorCodes(config.getStringList("success_messages"));
         errorMessages = ChatColorUtils.translateColorCodes(config.getStringList("error_messages"));
+        alreadyRenamingMessages = ChatColorUtils.translateColorCodes(config.getStringList("already_renaming_messages"));
         itemNames = ChatColorUtils.translateColorCodes(config.getStringList("item_names"));
 
         retrySounds = ListUtils.toSoundList(config.getStringList("retry_sounds"));
@@ -59,6 +61,10 @@ public class RenameConfig {
 
     public String getErrorMessage() {
         return ChatColorUtils.translateColorCodes(ListUtils.getRandomString(errorMessages));
+    }
+
+    public String getAlreadyRenamingMessage() {
+        return ChatColorUtils.translateColorCodes(ListUtils.getRandomString(alreadyRenamingMessages));
     }
 
     public String getItemName() {

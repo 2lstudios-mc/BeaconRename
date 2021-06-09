@@ -17,7 +17,7 @@ public class BeaconRename extends JavaPlugin {
         final RenameManager renameManager = new RenameManager(renameConfig);
         final long delay = renameConfig.getDelay();
 
-        BeaconRenameListeners.initialize(this, renameManager);
+        BeaconRenameListeners.initialize(this, renameConfig, renameManager);
 
         getServer().getScheduler().runTaskTimerAsynchronously(this, renameManager, delay, delay);
     }
