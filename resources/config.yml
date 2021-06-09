@@ -24,29 +24,35 @@ retry_messages:
 # Messages to show when rename was successful
 success_messages:
  - "%item_name% &6» &aEste si me gusta, esta genial!"
+ - "%item_name% &6» &aWoooW, este me encanta!"
  
 # Messages to show when an error has ocurred
 error_messages:
  - "&cUh-Oh! El item no pudo ser renombrado..."
 
 # Messages to show when player doesn't have permission to use BeaconRename
-permission_messages:
-  - "&cParece que no ienes permisos para realizar eso..."
+no_permission_messages:
+  - "&cParece que no tienes permisos para realizar eso..."
   - "&cNo tienes permisos suficientes!"
+  - "&cYa veo parece que no tienes permisos."
 
 # Available sounds (1.8): https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
 # Sounds to play when retrying rename
 retry_sounds:
- - "NOTE_PLING"
+ - "LEVEL_UP"
 
 # Sounds to play when rename was successful
 success_sounds:
- - "LEVEL_UP"
+ - "ANVIL_USE"
 
 # Sounds to play when an error has ocurred
 error_sounds:
- - "VILLAGER_YES"
-  
+ - "VILLAGER_NO"
+
+# Sound that plays when you do not have permissions
+no_permission_sounds: 
+ - "ITEM_BREAK"
+ 
 # Randomly selected renames to apply with beacons
 item_names:
  - "&bAutoClick"
@@ -107,3 +113,6 @@ item_names:
  - "&bBadBoy"
  - "&bHappy"
  - "&bPoggers"
+ - "&bPeces"
+ - "&bDude"
+ - "&bStonks"
