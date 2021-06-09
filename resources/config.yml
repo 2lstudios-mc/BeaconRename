@@ -29,7 +29,7 @@ success_messages:
 error_messages:
  - "&cUh-Oh! El item no pudo ser renombrado..."
 
-# Messages to show when player doesn't have permission
+# Messages to show when player doesn't have permission to use BeaconRename
 permission_messages:
   - "&cParece que no ienes permisos para realizar eso..."
   - "&cNo tienes permisos suficientes!"
