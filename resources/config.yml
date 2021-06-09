@@ -28,7 +28,12 @@ success_messages:
 # Messages to show when an error has ocurred
 error_messages:
  - "&cUh-Oh! El item no pudo ser renombrado..."
- 
+
+# Messages to show when player doesn't have permission
+permission_messages:
+  - "&cParece que no ienes permisos para realizar eso..."
+  - "&cNo tienes permisos suficientes!"
+
 # Available sounds (1.8): https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
 # Sounds to play when retrying rename
 retry_sounds:
