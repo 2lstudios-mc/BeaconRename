@@ -1,3 +1,4 @@
 name: BeaconRename
 version: 0.0.1
 main: dev._2lstudios.BeaconRename
+api-version: 1.13
