@@ -16,25 +16,28 @@ permission: "beaconrename.usage"
 
 # Messages to show when retrying rename
 retry_messages:
- - "%item_name% &e» &cHmmm... que feo nombre..."
- - "%item_name% &e» &cHmmm... no me convence..."
- - "%item_name% &e» &cHmmm... puede ser... mejor no."
- - "%item_name% &e» &cBueno pero puede haber mejores."
+ - "%item_name% &e» &cThat's not a good name..."
+ - "%item_name% &e» &cHmmm... it doesn't convince me..."
+ - "%item_name% &e» &cHmmm... maybe... or not..."
+ - "%item_name% &e» &cOkay, but it could be better..."
+ - "%item_name% &e» &cThat's not okay..."
  
 # Messages to show when rename was successful
 success_messages:
- - "%item_name% &6» &aEste si me gusta, esta genial!"
- - "%item_name% &6» &aWoooW, este me encanta!"
+ - "%item_name% &6» &aI like this one, alright!"
+ - "%item_name% &6» &aWooW! I love it!"
+ - "%item_name% &6» &aThis is the one! Keep it!"
  
 # Messages to show when an error has ocurred
 error_messages:
- - "&cUh-Oh! El item no pudo ser renombrado..."
+ - "&cUh-Oh! The item can't be renamed..."
+ - "&cAn error ocurred while renaming the item..."
 
 # Messages to show when player doesn't have permission to use BeaconRename
 no_permission_messages:
-  - "&cParece que no tienes permisos para realizar eso..."
-  - "&cNo tienes permisos suficientes!"
-  - "&cYa veo parece que no tienes permisos."
+  - "&cIt seems you don't have permissions."
+  - "&cYou don't have permissions to do this."
+  - "&cI see, you have no permission to do this."
 
 # Available sounds (1.8): https://helpch.at/docs/1.8.8/index.html?org/bukkit/Sound.html
 # Sounds to play when retrying rename
