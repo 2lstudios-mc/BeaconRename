@@ -9,9 +9,11 @@ public class ListUtils {
     public static List<Sound> toSoundList(final List<String> strings) {
         final List<Sound> sounds = new ArrayList<Sound>();
 
-        for (final Sound sound : Sound.values()) {
-            if (strings.contains(sound.name())) {
-                sounds.add(sound);
+        if (strings != null && !strings.isEmpty()) {
+            for (final Sound sound : Sound.values()) {
+                if (strings.contains(sound.name())) {
+                    sounds.add(sound);
+                }
             }
         }
 
